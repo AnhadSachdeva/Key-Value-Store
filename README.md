@@ -1,7 +1,6 @@
 # Custom Redis-Inspired Key-Value Store
 
-Inspired by the book "Build your own Redis in C/C++". The book implements in C basically which goes pretty low level.
-This is purely now implemented in C++. 
+Inspired by the book "Build your own Redis in C/C++" by James Smith. The book implements in C basically which goes pretty low level.
 
 A custom in-memory key-value store inspired by Redis, implemented in C++. This project includes custom implementations of various data structures and provides a Redis-like interface for storing and retrieving data.
 
@@ -82,7 +81,8 @@ The project is organized into several components:
 - More Redis commands (Lists, Sets, Hashes)
 
 
-
 ## Acknowledgements
 
 This project was inspired by Redis, the popular in-memory data structure store. 
+
+"Build your own Redis in C/C++" by James Smith
