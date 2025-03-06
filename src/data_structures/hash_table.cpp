@@ -106,7 +106,6 @@ std::optional<Value> HashTable::get(const std::string& key) {
     auto it = find_entry(key, bucket_idx);
     
     if (it != buckets_[bucket_idx].end()) {
-        // Removed expiration check
         return it->value;
     }
     
@@ -134,7 +133,6 @@ bool HashTable::exists(const std::string& key) {
     size_t bucket_idx = hash_function(key);
     auto it = find_entry(key, bucket_idx);
     
-    // Removed expiration check
     return it != buckets_[bucket_idx].end();
 }
 
@@ -170,7 +168,6 @@ void HashTable::for_each(const std::function<void(const std::string&, const Valu
     
     for (auto& bucket : buckets_) {
         for (auto it = bucket.begin(); it != bucket.end(); ++it) {
-            // Removed expiration check
             fn(it->key, it->value);
         }
     }
@@ -188,7 +185,6 @@ void HashTable::resize(size_t new_size) {
     
     for (auto& bucket : buckets_) {
         for (auto& entry : bucket) {
-            // Removed expiration check
             size_t new_idx = std::hash<std::string>{}(entry.key) % new_size;
             new_buckets[new_idx].push_back(entry);
         }
