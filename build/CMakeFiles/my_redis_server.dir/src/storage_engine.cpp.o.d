@@ -1,7 +1,7 @@
 CMakeFiles/my_redis_server.dir/src/storage_engine.cpp.o: \
-  /Users/lappy/Desktop/projects/my-redis/src/storage_engine.cpp \
-  /Users/lappy/Desktop/projects/my-redis/include/storage_engine.h \
-  /Users/lappy/Desktop/projects/my-redis/include/data_structures/hash_table.h \
+  /Users/lappy/Desktop/Key-Value-Store/src/storage_engine.cpp \
+  /Users/lappy/Desktop/Key-Value-Store/include/storage_engine.h \
+  /Users/lappy/Desktop/Key-Value-Store/include/data_structures/hash_table.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/max.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/comp.h \
@@ -891,9 +891,9 @@ CMakeFiles/my_redis_server.dir/src/storage_engine.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__chrono/year_month_day.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__chrono/year_month_weekday.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__chrono/literals.h \
-  /Users/lappy/Desktop/projects/my-redis/include/data_structures/heap.h \
-  /Users/lappy/Desktop/projects/my-redis/include/data_structures/sorted_set.h \
-  /Users/lappy/Desktop/projects/my-redis/include/data_structures/avl_tree.h \
+  /Users/lappy/Desktop/Key-Value-Store/include/data_structures/heap.h \
+  /Users/lappy/Desktop/Key-Value-Store/include/data_structures/sorted_set.h \
+  /Users/lappy/Desktop/Key-Value-Store/include/data_structures/avl_tree.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/thread \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__thread/formatter.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__thread/this_thread.h \

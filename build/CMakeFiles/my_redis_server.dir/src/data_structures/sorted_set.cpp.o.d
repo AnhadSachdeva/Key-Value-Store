@@ -1,7 +1,7 @@
 CMakeFiles/my_redis_server.dir/src/data_structures/sorted_set.cpp.o: \
-  /Users/lappy/Desktop/projects/my-redis/src/data_structures/sorted_set.cpp \
-  /Users/lappy/Desktop/projects/my-redis/include/data_structures/sorted_set.h \
-  /Users/lappy/Desktop/projects/my-redis/include/data_structures/avl_tree.h \
+  /Users/lappy/Desktop/Key-Value-Store/src/data_structures/sorted_set.cpp \
+  /Users/lappy/Desktop/Key-Value-Store/include/data_structures/sorted_set.h \
+  /Users/lappy/Desktop/Key-Value-Store/include/data_structures/avl_tree.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/memory \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__assert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__config \

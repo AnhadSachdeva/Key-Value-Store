@@ -57,10 +57,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lappy/Desktop/projects/my-redis
+CMAKE_SOURCE_DIR = /Users/lappy/Desktop/Key-Value-Store
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lappy/Desktop/projects/my-redis/build
+CMAKE_BINARY_DIR = /Users/lappy/Desktop/Key-Value-Store/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lappy/Desktop/projects/my-redis/build/CMakeFiles /Users/lappy/Desktop/projects/my-redis/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lappy/Desktop/Key-Value-Store/build/CMakeFiles /Users/lappy/Desktop/Key-Value-Store/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lappy/Desktop/projects/my-redis/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lappy/Desktop/Key-Value-Store/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -174,6 +174,43 @@ my_redis_server/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_redis_server.dir/build.make CMakeFiles/my_redis_server.dir/build
 .PHONY : my_redis_server/fast
 
+#=============================================================================
+# Target rules for targets named manual_test
+
+# Build rule for target.
+manual_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 manual_test
+.PHONY : manual_test
+
+# fast build rule for target.
+manual_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/manual_test.dir/build.make CMakeFiles/manual_test.dir/build
+.PHONY : manual_test/fast
+
+manual_test.o: manual_test.cpp.o
+.PHONY : manual_test.o
+
+# target to build an object file
+manual_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/manual_test.dir/build.make CMakeFiles/manual_test.dir/manual_test.cpp.o
+.PHONY : manual_test.cpp.o
+
+manual_test.i: manual_test.cpp.i
+.PHONY : manual_test.i
+
+# target to preprocess a source file
+manual_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/manual_test.dir/build.make CMakeFiles/manual_test.dir/manual_test.cpp.i
+.PHONY : manual_test.cpp.i
+
+manual_test.s: manual_test.cpp.s
+.PHONY : manual_test.s
+
+# target to generate assembly for a file
+manual_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/manual_test.dir/build.make CMakeFiles/manual_test.dir/manual_test.cpp.s
+.PHONY : manual_test.cpp.s
+
 src/commands/command_handler.o: src/commands/command_handler.cpp.o
 .PHONY : src/commands/command_handler.o
 
@@ -204,6 +241,7 @@ src/data_structures/hash_table.o: src/data_structures/hash_table.cpp.o
 # target to build an object file
 src/data_structures/hash_table.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_redis_server.dir/build.make CMakeFiles/my_redis_server.dir/src/data_structures/hash_table.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/manual_test.dir/build.make CMakeFiles/manual_test.dir/src/data_structures/hash_table.cpp.o
 .PHONY : src/data_structures/hash_table.cpp.o
 
 src/data_structures/hash_table.i: src/data_structures/hash_table.cpp.i
@@ -212,6 +250,7 @@ src/data_structures/hash_table.i: src/data_structures/hash_table.cpp.i
 # target to preprocess a source file
 src/data_structures/hash_table.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_redis_server.dir/build.make CMakeFiles/my_redis_server.dir/src/data_structures/hash_table.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/manual_test.dir/build.make CMakeFiles/manual_test.dir/src/data_structures/hash_table.cpp.i
 .PHONY : src/data_structures/hash_table.cpp.i
 
 src/data_structures/hash_table.s: src/data_structures/hash_table.cpp.s
@@ -220,6 +259,7 @@ src/data_structures/hash_table.s: src/data_structures/hash_table.cpp.s
 # target to generate assembly for a file
 src/data_structures/hash_table.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_redis_server.dir/build.make CMakeFiles/my_redis_server.dir/src/data_structures/hash_table.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/manual_test.dir/build.make CMakeFiles/manual_test.dir/src/data_structures/hash_table.cpp.s
 .PHONY : src/data_structures/hash_table.cpp.s
 
 src/data_structures/heap.o: src/data_structures/heap.cpp.o
@@ -228,6 +268,7 @@ src/data_structures/heap.o: src/data_structures/heap.cpp.o
 # target to build an object file
 src/data_structures/heap.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_redis_server.dir/build.make CMakeFiles/my_redis_server.dir/src/data_structures/heap.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/manual_test.dir/build.make CMakeFiles/manual_test.dir/src/data_structures/heap.cpp.o
 .PHONY : src/data_structures/heap.cpp.o
 
 src/data_structures/heap.i: src/data_structures/heap.cpp.i
@@ -236,6 +277,7 @@ src/data_structures/heap.i: src/data_structures/heap.cpp.i
 # target to preprocess a source file
 src/data_structures/heap.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_redis_server.dir/build.make CMakeFiles/my_redis_server.dir/src/data_structures/heap.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/manual_test.dir/build.make CMakeFiles/manual_test.dir/src/data_structures/heap.cpp.i
 .PHONY : src/data_structures/heap.cpp.i
 
 src/data_structures/heap.s: src/data_structures/heap.cpp.s
@@ -244,6 +286,7 @@ src/data_structures/heap.s: src/data_structures/heap.cpp.s
 # target to generate assembly for a file
 src/data_structures/heap.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_redis_server.dir/build.make CMakeFiles/my_redis_server.dir/src/data_structures/heap.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/manual_test.dir/build.make CMakeFiles/manual_test.dir/src/data_structures/heap.cpp.s
 .PHONY : src/data_structures/heap.cpp.s
 
 src/data_structures/sorted_set.o: src/data_structures/sorted_set.cpp.o
@@ -252,6 +295,7 @@ src/data_structures/sorted_set.o: src/data_structures/sorted_set.cpp.o
 # target to build an object file
 src/data_structures/sorted_set.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_redis_server.dir/build.make CMakeFiles/my_redis_server.dir/src/data_structures/sorted_set.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/manual_test.dir/build.make CMakeFiles/manual_test.dir/src/data_structures/sorted_set.cpp.o
 .PHONY : src/data_structures/sorted_set.cpp.o
 
 src/data_structures/sorted_set.i: src/data_structures/sorted_set.cpp.i
@@ -260,6 +304,7 @@ src/data_structures/sorted_set.i: src/data_structures/sorted_set.cpp.i
 # target to preprocess a source file
 src/data_structures/sorted_set.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_redis_server.dir/build.make CMakeFiles/my_redis_server.dir/src/data_structures/sorted_set.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/manual_test.dir/build.make CMakeFiles/manual_test.dir/src/data_structures/sorted_set.cpp.i
 .PHONY : src/data_structures/sorted_set.cpp.i
 
 src/data_structures/sorted_set.s: src/data_structures/sorted_set.cpp.s
@@ -268,6 +313,7 @@ src/data_structures/sorted_set.s: src/data_structures/sorted_set.cpp.s
 # target to generate assembly for a file
 src/data_structures/sorted_set.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_redis_server.dir/build.make CMakeFiles/my_redis_server.dir/src/data_structures/sorted_set.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/manual_test.dir/build.make CMakeFiles/manual_test.dir/src/data_structures/sorted_set.cpp.s
 .PHONY : src/data_structures/sorted_set.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -324,6 +370,7 @@ src/storage_engine.o: src/storage_engine.cpp.o
 # target to build an object file
 src/storage_engine.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_redis_server.dir/build.make CMakeFiles/my_redis_server.dir/src/storage_engine.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/manual_test.dir/build.make CMakeFiles/manual_test.dir/src/storage_engine.cpp.o
 .PHONY : src/storage_engine.cpp.o
 
 src/storage_engine.i: src/storage_engine.cpp.i
@@ -332,6 +379,7 @@ src/storage_engine.i: src/storage_engine.cpp.i
 # target to preprocess a source file
 src/storage_engine.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_redis_server.dir/build.make CMakeFiles/my_redis_server.dir/src/storage_engine.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/manual_test.dir/build.make CMakeFiles/manual_test.dir/src/storage_engine.cpp.i
 .PHONY : src/storage_engine.cpp.i
 
 src/storage_engine.s: src/storage_engine.cpp.s
@@ -340,6 +388,7 @@ src/storage_engine.s: src/storage_engine.cpp.s
 # target to generate assembly for a file
 src/storage_engine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_redis_server.dir/build.make CMakeFiles/my_redis_server.dir/src/storage_engine.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/manual_test.dir/build.make CMakeFiles/manual_test.dir/src/storage_engine.cpp.s
 .PHONY : src/storage_engine.cpp.s
 
 # Help Target
@@ -354,7 +403,11 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... manual_test"
 	@echo "... my_redis_server"
+	@echo "... manual_test.o"
+	@echo "... manual_test.i"
+	@echo "... manual_test.s"
 	@echo "... src/commands/command_handler.o"
 	@echo "... src/commands/command_handler.i"
 	@echo "... src/commands/command_handler.s"

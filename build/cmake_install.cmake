@@ -1,4 +1,4 @@
-# Install script for directory: /Users/lappy/Desktop/projects/my-redis
+# Install script for directory: /Users/lappy/Desktop/Key-Value-Store
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/Users/lappy/Desktop/projects/my-redis/build/my_redis_server")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/Users/lappy/Desktop/Key-Value-Store/build/my_redis_server")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/my_redis_server" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/my_redis_server")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -48,13 +48,13 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/Users/lappy/Desktop/projects/my-redis/build/CMakeFiles/my_redis_server.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
+  include("/Users/lappy/Desktop/Key-Value-Store/build/CMakeFiles/my_redis_server.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/Users/lappy/Desktop/projects/my-redis/build/install_local_manifest.txt"
+  file(WRITE "/Users/lappy/Desktop/Key-Value-Store/build/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -70,6 +70,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/Users/lappy/Desktop/projects/my-redis/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/Users/lappy/Desktop/Key-Value-Store/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

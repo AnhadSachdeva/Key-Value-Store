@@ -1,7 +1,8 @@
-/Users/lappy/Desktop/projects/my-redis/build/CMakeFiles/my_redis_server.dir
-/Users/lappy/Desktop/projects/my-redis/build/CMakeFiles/edit_cache.dir
-/Users/lappy/Desktop/projects/my-redis/build/CMakeFiles/rebuild_cache.dir
-/Users/lappy/Desktop/projects/my-redis/build/CMakeFiles/list_install_components.dir
-/Users/lappy/Desktop/projects/my-redis/build/CMakeFiles/install.dir
-/Users/lappy/Desktop/projects/my-redis/build/CMakeFiles/install/local.dir
-/Users/lappy/Desktop/projects/my-redis/build/CMakeFiles/install/strip.dir
+/Users/lappy/Desktop/Key-Value-Store/build/CMakeFiles/my_redis_server.dir
+/Users/lappy/Desktop/Key-Value-Store/build/CMakeFiles/manual_test.dir
+/Users/lappy/Desktop/Key-Value-Store/build/CMakeFiles/edit_cache.dir
+/Users/lappy/Desktop/Key-Value-Store/build/CMakeFiles/rebuild_cache.dir
+/Users/lappy/Desktop/Key-Value-Store/build/CMakeFiles/list_install_components.dir
+/Users/lappy/Desktop/Key-Value-Store/build/CMakeFiles/install.dir
+/Users/lappy/Desktop/Key-Value-Store/build/CMakeFiles/install/local.dir
+/Users/lappy/Desktop/Key-Value-Store/build/CMakeFiles/install/strip.dir

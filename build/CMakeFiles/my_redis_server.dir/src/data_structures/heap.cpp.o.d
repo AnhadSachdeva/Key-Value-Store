@@ -1,6 +1,6 @@
 CMakeFiles/my_redis_server.dir/src/data_structures/heap.cpp.o: \
-  /Users/lappy/Desktop/projects/my-redis/src/data_structures/heap.cpp \
-  /Users/lappy/Desktop/projects/my-redis/include/data_structures/heap.h \
+  /Users/lappy/Desktop/Key-Value-Store/src/data_structures/heap.cpp \
+  /Users/lappy/Desktop/Key-Value-Store/include/data_structures/heap.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/vector \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/copy.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/copy_move_common.h \

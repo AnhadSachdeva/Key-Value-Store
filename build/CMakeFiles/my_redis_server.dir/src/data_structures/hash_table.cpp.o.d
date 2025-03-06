@@ -1,6 +1,6 @@
 CMakeFiles/my_redis_server.dir/src/data_structures/hash_table.cpp.o: \
-  /Users/lappy/Desktop/projects/my-redis/src/data_structures/hash_table.cpp \
-  /Users/lappy/Desktop/projects/my-redis/include/data_structures/hash_table.h \
+  /Users/lappy/Desktop/Key-Value-Store/src/data_structures/hash_table.cpp \
+  /Users/lappy/Desktop/Key-Value-Store/include/data_structures/hash_table.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/max.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/comp.h \
