@@ -12,8 +12,6 @@
 
 namespace my_redis {
 
-// Forward declarations
-class Value;
 
 // Value class to store different types of data
 class Value {
@@ -96,9 +94,6 @@ public:
     // For iteration
     void for_each(const std::function<void(const std::string&, const Value&)>& fn);
     
-    // For TTL management
-    std::vector<std::string> get_expired_keys();
-
 private:
     size_t bucket_count_;
     std::vector<std::list<Entry>> buckets_;

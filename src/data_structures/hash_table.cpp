@@ -106,12 +106,7 @@ std::optional<Value> HashTable::get(const std::string& key) {
     auto it = find_entry(key, bucket_idx);
     
     if (it != buckets_[bucket_idx].end()) {
-        if (it->is_expired()) {
-            // Remove expired entry
-            buckets_[bucket_idx].erase(it);
-            size_--;
-            return std::nullopt;
-        }
+        // Removed expiration check
         return it->value;
     }
     
@@ -139,17 +134,8 @@ bool HashTable::exists(const std::string& key) {
     size_t bucket_idx = hash_function(key);
     auto it = find_entry(key, bucket_idx);
     
-    if (it != buckets_[bucket_idx].end()) {
-        if (it->is_expired()) {
-            // Remove expired entry
-            buckets_[bucket_idx].erase(it);
-            size_--;
-            return false;
-        }
-        return true;
-    }
-    
-    return false;
+    // Removed expiration check
+    return it != buckets_[bucket_idx].end();
 }
 
 bool HashTable::expire(const std::string& key, std::chrono::seconds ttl) {
@@ -183,35 +169,11 @@ void HashTable::for_each(const std::function<void(const std::string&, const Valu
     std::lock_guard<std::mutex> lock(mutex_);
     
     for (auto& bucket : buckets_) {
-        for (auto it = bucket.begin(); it != bucket.end();) {
-            if (it->is_expired()) {
-                it = bucket.erase(it);
-                size_--;
-            } else {
-                fn(it->key, it->value);
-                ++it;
-            }
+        for (auto it = bucket.begin(); it != bucket.end(); ++it) {
+            // Removed expiration check
+            fn(it->key, it->value);
         }
     }
-}
-
-std::vector<std::string> HashTable::get_expired_keys() {
-    std::lock_guard<std::mutex> lock(mutex_);
-    std::vector<std::string> expired_keys;
-    
-    for (auto& bucket : buckets_) {
-        for (auto it = bucket.begin(); it != bucket.end();) {
-            if (it->is_expired()) {
-                expired_keys.push_back(it->key);
-                it = bucket.erase(it);
-                size_--;
-            } else {
-                ++it;
-            }
-        }
-    }
-    
-    return expired_keys;
 }
 
 void HashTable::resize_if_needed() {
@@ -226,12 +188,9 @@ void HashTable::resize(size_t new_size) {
     
     for (auto& bucket : buckets_) {
         for (auto& entry : bucket) {
-            if (!entry.is_expired()) {
-                size_t new_idx = std::hash<std::string>{}(entry.key) % new_size;
-                new_buckets[new_idx].push_back(entry);
-            } else {
-                size_--;  // Expired entries are not transferred
-            }
+            // Removed expiration check
+            size_t new_idx = std::hash<std::string>{}(entry.key) % new_size;
+            new_buckets[new_idx].push_back(entry);
         }
     }
     
